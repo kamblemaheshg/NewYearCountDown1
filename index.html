@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .time{
+            display: flex;
+            justify-content: center;
+            color: white;
+            background-color: black;
+            padding-top: 40vh;
+            padding-bottom: 45vh;
+            /* padding: auto; */
+        }
+    </style>
+</head>
+<body>
+    
+    <button  onclick="openFullscreen();">
+        click
+    </button>
+    <div id="myvideo" class="time">
+        <iframe src="https://free.timeanddate.com/countdown/i8mx2lu1/n1650/cf12/cm0/cu4/ct1/cs0/ca0/co0/cr1/ss0/cacfff/cpc000/pc000/tcfff/fn3/fs300/szw576/szh243/iso2023-01-01T00:00:00/pa7" allowtransparency="true" frameborder="0" width="579" height="111"></iframe>
+
+    </div>
+    <script>
+        /* Get the element you want displayed in fullscreen mode (a video in this example): */
+var elem = document.getElementById("myvideo");
+
+/* When the openFullscreen() function is executed, open the video in fullscreen.
+Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+    </script>
+
+
+
+</body>
+</html>
